@@ -35,18 +35,16 @@ Then open [http://localhost:5000](http://localhost:5000) in your browser.
 
 ## Deployment
 
-### Why not GitHub Pages?
-GitHub Pages is designed for **static** websites (pure HTML/CSS/JS). Because this project uses a **Python (Flask)** backend to run the sentiment logic, you need a platform that supports server-side code.
-
-### Recommended: Render.com (Free Tier)
-1. Create a free account on [Render.com](https://render.com/).
-2. Click **New +** and select **Web Service**.
-3. Connect your GitHub repository.
-4. Render will automatically detect the `render.yaml` or you can use these settings:
-   - **Environment**: `Python`
-   - **Build Command**: `pip install -r requirements.txt && pip install -e .`
-   - **Start Command**: `gunicorn gui_server:app`
-5. Click **Deploy**.
+Streamlit Cloud (Easiest)
+- **Status**: Completely Free.
+- **Pros**: One-click deployment, great for data apps.
+- **Cons**: Public by default on the free tier.
+- **Setup**: 
+    1. Sign in to [share.streamlit.io](https://share.streamlit.io/).
+    2. Connect your GitHub.
+    3. Select your repo and branch (`main`).
+    4. Set **Main file path** to `streamlit_app.py`.
+    5. Click **Deploy**.
 
 ## Project Structure
 - `src/simple_sentiment_analyzer/`: Core logic and analysis engine.
