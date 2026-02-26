@@ -1,3 +1,9 @@
+import sys
+import os
+
+# Add the src directory to the path so we can import the package directly
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'src'))
+
 import streamlit as st
 import nltk
 from simple_sentiment_analyzer import SimpleSentimentAnalyzer
@@ -7,6 +13,8 @@ from simple_sentiment_analyzer import SimpleSentimentAnalyzer
 def download_nltk():
     nltk.download('punkt_tab')
     nltk.download('averaged_perceptron_tagger_eng')
+    nltk.download('brown')
+    nltk.download('wordnet')
 
 download_nltk()
 
