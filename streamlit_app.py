@@ -1,5 +1,14 @@
 import streamlit as st
+import nltk
 from simple_sentiment_analyzer import SimpleSentimentAnalyzer
+
+# Download NLTK data
+@st.cache_resource
+def download_nltk():
+    nltk.download('punkt_tab')
+    nltk.download('averaged_perceptron_tagger_eng')
+
+download_nltk()
 
 # Page config
 st.set_page_config(page_title="Simple Sentiment Analyzer", page_icon="📊")
