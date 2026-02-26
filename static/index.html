@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Sentiment Analyzer | Premium AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="container">
+        <header class="glass-card header">
+            <h1>Simple Sentiment Analyzer</h1>
+            <p>Understand the emotion behind every word with precision.</p>
+        </header>
+
+        <section class="glass-card input-section">
+            <textarea id="text-input" placeholder="Paste your text here..."></textarea>
+            <button id="analyze-btn" class="primary-btn">Analyze Sentiment</button>
+        </section>
+
+        <section id="result-section" class="glass-card result-section hidden">
+            <div class="result-grid">
+                <div class="result-item">
+                    <div class="label-row">
+                        <span class="label">Polarity</span>
+                        <span class="range">(-1.0 to 1.0)</span>
+                    </div>
+                    <span class="explanation">Positive vs Negative</span>
+                    <div class="progress-container">
+                        <div id="polarity-bar" class="progress-bar"></div>
+                    </div>
+                    <span id="polarity-val" class="value">0.00</span>
+                </div>
+                <div class="result-item">
+                    <div class="label-row">
+                        <span class="label">Subjectivity</span>
+                        <span class="range">(0.0 to 1.0)</span>
+                    </div>
+                    <span class="explanation">Opinion vs Fact</span>
+                    <div class="progress-container">
+                        <div id="subjectivity-bar" class="progress-bar"></div>
+                    </div>
+                    <span id="subjectivity-val" class="value">0.00</span>
+                </div>
+            </div>
+            <div class="sentiment-badge-container">
+                <span id="sentiment-badge" class="badge">Neutral</span>
+            </div>
+        </section>
+    </main>
+
+    <script src="static/script.js"></script>
+</body>
+
+</html>
